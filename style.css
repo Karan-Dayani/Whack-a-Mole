@@ -1,5 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: 'Sriracha', cursive;
+}
+
+body {
+    background-color: #0e0e10;
+}
+
+.bn39 {
+    background-image: linear-gradient(135deg, #008aff, #86d472);
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: block;
+    height: 50px;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: 4px;
+    position: relative;
+    text-decoration: none;
+    width: 7em;
+    z-index: 2;
+}
+
+.bn39:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.bn39 .bn39span {
+    align-items: center;
+    background: #0e0e10;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: background 0.5s ease;
+    width: 100%;
+}
+
+.bn39:hover .bn39span {
+    background: transparent;
+}
+
+.play-section {
+    transition: all 0.5s ease 0.5s;
+    z-index: 1;
+}
+
+.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fadeIn {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.game-area {
+    transition: all 0.5s ease 0.8s;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 600px;
+    min-height: 500px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        position: absolute;
+        max-width: 400px;
+        min-height: 400px;
+        top: 180px;
+    }
+}
+
+.tile {
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.mole {
+    background-image: url(mole.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }

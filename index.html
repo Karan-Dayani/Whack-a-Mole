@@ -17,8 +17,35 @@
     <section class="play-section position-absolute top-50 start-50 translate-middle">
         <h1>Whack-a-Mole</h1>
         <div class="button d-flex justify-content-center">
-            <button class="btn btn-outline-dark btn-lg">Play</button>
+            <a class="play-btn bn39"><span class="bn39span">Play</span></a>
         </div>
+    </section>
+
+    <section class="game-area fadeOut">
+
+        <h1 class="d-flex justify-content-center heading">Whack-a-Mole</h1>
+
+        <br>
+
+        <div class="info d-flex justify-content-evenly">
+            <h2>Points : <span class="points">0</span></h2>
+            <h2>Time left : <span class="time-left">60</span> sec</h2>
+        </div>
+
+        <br>
+
+        <div class="game container">
+            <div class="square tile" id="1"></div>
+            <div class="square tile" id="2"></div>
+            <div class="square tile" id="3"></div>
+            <div class="square tile" id="4"></div>
+            <div class="square tile" id="5"></div>
+            <div class="square tile" id="6"></div>
+            <div class="square tile" id="7"></div>
+            <div class="square tile" id="8"></div>
+            <div class="square tile" id="9"></div>
+        </div>
+
     </section>
 
     <script src="app.js"></script>
