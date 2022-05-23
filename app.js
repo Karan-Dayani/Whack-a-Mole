@@ -2,6 +2,7 @@ const playSection = document.querySelector(".play-section");
 const playButton = document.querySelector(".button");
 const gameArea = document.querySelector(".game-area")
 const gameOverSection = document.querySelector(".game-over-section");
+const playAgainButton = document.querySelector(".play-again-btn");
 
 const squares = document.querySelectorAll(".square");
 const mole = document.querySelector(".mole");
@@ -61,4 +62,22 @@ playButton.onclick = () => {
         moveMole();
         countDownTimerID = setInterval(countDown, 1000);
     }, 1000);
+}
+
+playAgainButton.onclick = () => {
+    gameOverSection.classList.replace("fadeIn", "fadeOut");
+    setTimeout(() => {
+        gameArea.classList.replace("fadeOut", "fadeIn");
+    }, 1000);
+    result = 0;
+    currentTime = 60;
+    score.textContent = result;
+    timeLeft.textContent = currentTime;
+    squares.forEach(square => {
+        square.classList.remove("mole");
+    })
+    setTimeout(() => {
+        moveMole();
+        countDownTimerID = setInterval(countDown, 1000);
+    }, 2300);
 }
